@@ -1,32 +1,36 @@
-// ...existing code...
 import { Routes } from "@/src/navigation"
+import Entypo from "@expo/vector-icons/Entypo"
+import Feather from "@expo/vector-icons/Feather"
 import { Tabs } from "expo-router"
 
 export default function TabLayout() {
   return (
-    <Tabs>
+    <Tabs screenOptions={{ headerShown: false, tabBarShowLabel: false }}>
       <Tabs.Screen
         name={Routes.HOME.name}
         options={{
-          title: "Home",
           // tabBarIcon: ({ color }) => <MaterialIcons size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Entypo name="home" size={24} color="black" />
+          ),
         }}
       />
       <Tabs.Screen
         name={Routes.PROFILE.name}
         options={{
-          title: "Profile",
-          // tabBarIcon: ({ color }) => <MaterialIcons size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Feather name="user" size={24} color="black" />
+          ),
         }}
       />
       <Tabs.Screen
         name={Routes.SEARCH.name}
         options={{
-          title: "Search",
-          // tabBarIcon: ({ color }) => <MaterialIcons size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Feather name="search" size={22} color="black" />
+          ),
         }}
       />
     </Tabs>
   )
 }
-// ...existing code...
