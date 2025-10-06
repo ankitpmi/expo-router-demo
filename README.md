@@ -48,3 +48,58 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Directory Architecture
+
+```bash
+app
+├── (auth)
+│   └── Login
+│       └── index.tsx
+├── (main)
+│   ├── (tabs)
+│   │   ├── Home
+│   │   │   ├── index.tsx
+│   │   │   └── useHome.ts
+│   │   ├── Profile
+│   │   │   └── index.tsx
+│   │   ├── Search
+│   │   │   └── index.tsx
+│   │   └── _layout.tsx
+│   └── HelpCenter
+│       ├── index.tsx
+│       └── useHelpCenter.ts
+├── _layout.tsx
+└── index.tsx
+
+assets
+└── images
+    ├── android-icon-background.png
+    ├── android-icon-foreground.png
+    ├── android-icon-monochrome.png
+    ├── favicon.png
+    ├── icon.png
+    ├── partial-react-logo.png
+    ├── react-logo.png
+    ├── react-logo@2x.png
+    ├── react-logo@3x.png
+    └── splash-icon.png
+src
+├── components
+│   ├── LoadingIndicator
+│   │   └── LoadingIndicator.tsx
+│   └── index.ts
+├── constant
+│   ├── colors.ts
+│   └── index.ts
+├── context
+│   ├── AuthContext.tsx
+│   └── index.ts
+└── navigation
+    ├── index.ts
+    └── routes.ts
+package.json
+tsconfig.json
+eslint.config.js
+app.json
+```
