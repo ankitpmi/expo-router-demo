@@ -15,16 +15,6 @@ const AppRoutes = () => {
 
   return (
     <>
-      {/* <Stack
-        screenOptions={(props) => {
-          // console.log("navigation ::: ", props.navigation)
-          // console.log("route ::: ", props.route)
-          // console.log("theme ::: ", props.theme)
-          return {
-            headerShown: false,
-          }
-        }}
-      /> */}
       <Stack
         screenOptions={(props) => {
           // console.log("navigation ::: ", props.navigation)
