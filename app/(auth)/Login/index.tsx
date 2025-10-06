@@ -1,4 +1,5 @@
 import { colors } from "@/src/constant"
+import { useAuthContext } from "@/src/context"
 import { Routes } from "@/src/navigation"
 import { useRouter } from "expo-router"
 import React, { useCallback } from "react"
@@ -6,11 +7,12 @@ import { Pressable, StyleSheet, Text, View } from "react-native"
 
 const Login = () => {
   const router = useRouter()
+  const { login } = useAuthContext()
 
   const handleLogin = useCallback(() => {
+    login()
     router.replace(Routes.HOME.route())
-    // router.replace('/(main)/Home' as const)
-  }, [router])
+  }, [login, router])
 
   return (
     <View style={styles.homeContainer}>
