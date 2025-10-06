@@ -9,4 +9,9 @@ export const Routes = {
     path: "(auth)/Login/index" as const,
     route: () => `/(auth)/Login` as const,
   },
+  TABS: {
+    key: "Tabs",
+    path: "(tabs)" as const,
+    route: () => `/(tabs)` as const,
+  },
 }

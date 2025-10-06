@@ -16,19 +16,14 @@ const AppRoutes = () => {
   return (
     <>
       <Stack
-        screenOptions={(props) => {
-          // console.log("navigation ::: ", props.navigation)
-          console.log("route ::: ", props.route)
-          // console.log("theme ::: ", props.theme)
-          return {
-            headerShown: false,
-          }
+        screenOptions={{
+          headerShown: false,
         }}>
         <Stack.Protected guard={!isLoggedIn}>
           <Stack.Screen name={Routes.LOGIN.path} />
         </Stack.Protected>
         <Stack.Protected guard={isLoggedIn}>
-          <Stack.Screen name={Routes.HOME.path} />
+          <Stack.Screen name={Routes.TABS.path} />
         </Stack.Protected>
       </Stack>
     </>

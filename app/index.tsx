@@ -8,7 +8,7 @@ export default function Index() {
   const { isLoggedIn, isLoading } = useAuthContext()
 
   const redirectRoute = useMemo(() => {
-    return isLoggedIn ? Routes.HOME.route() : Routes.LOGIN.route()
+    return isLoggedIn ? "/" : Routes.LOGIN.route()
   }, [isLoggedIn])
 
   if (isLoading) {
