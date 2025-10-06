@@ -1,7 +1,7 @@
 import { colors } from "@/src/constant"
 import React from "react"
 import { Pressable, StyleSheet, Text, View } from "react-native"
-import { useHome } from "./_useHome"
+import { useHome } from "./useHome"
 
 const Home = () => {
   const { handleLogout, handleHelpCenter } = useHome()

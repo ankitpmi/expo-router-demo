@@ -23,10 +23,14 @@ const AppRoutes = () => {
           <Stack.Screen name={Routes.LOGIN.path} />
         </Stack.Protected>
         <Stack.Protected guard={isLoggedIn}>
+          {/* Register only the top-level tabs group here. Individual tab
+              screens (Home/Search/Profile) live inside app/(main)/(tabs)/_layout.tsx
+              and will be registered by that layout. Registering nested files
+              at the root causes the "No route named ... exists in nested
+              children" warnings. */}
           <Stack.Screen name={Routes.TABS.path} />
-          <Stack.Screen name={Routes.HOME.path} />
-          <Stack.Screen name={Routes.SEARCH.path} />
-          <Stack.Screen name={Routes.PROFILE.path} />
+
+          {/* Keep standalone screens that live outside the tabs group */}
           <Stack.Screen name={Routes.HELP_CENTER.path} />
         </Stack.Protected>
       </Stack>
