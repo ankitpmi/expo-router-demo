@@ -24,6 +24,10 @@ const AppRoutes = () => {
         </Stack.Protected>
         <Stack.Protected guard={isLoggedIn}>
           <Stack.Screen name={Routes.TABS.path} />
+          <Stack.Screen name={Routes.HOME.path} />
+          <Stack.Screen name={Routes.SEARCH.path} />
+          <Stack.Screen name={Routes.PROFILE.path} />
+          <Stack.Screen name={Routes.HELP_CENTER.path} />
         </Stack.Protected>
       </Stack>
     </>

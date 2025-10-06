@@ -1,22 +1,16 @@
 import { colors } from "@/src/constant"
-import { useAuthContext } from "@/src/context"
-import { Routes } from "@/src/navigation"
-import { useRouter } from "expo-router"
-import React, { useCallback } from "react"
+import React from "react"
 import { Pressable, StyleSheet, Text, View } from "react-native"
+import { useHome } from "./_useHome"
 
 const Home = () => {
-  const router = useRouter()
-  const { logout } = useAuthContext()
-
-  const handleLogout = useCallback(() => {
-    logout()
-    router.replace(Routes.LOGIN.route())
-  }, [logout, router])
-
+  const { handleLogout, handleHelpCenter } = useHome()
   return (
     <View style={styles.homeContainer}>
       <Text style={styles.screenText}>Home</Text>
+      <Pressable style={styles.loginBtn} onPress={handleHelpCenter}>
+        <Text style={styles.buttonText}>Got to help center</Text>
+      </Pressable>
       <Pressable style={styles.loginBtn} onPress={handleLogout}>
         <Text style={styles.buttonText}>Logout</Text>
       </Pressable>

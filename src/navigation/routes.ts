@@ -1,8 +1,15 @@
+// Define a generic type for routes
+type RouteConfig<K extends string, P extends string> = {
+  key: K
+  path: P
+  route: (val?: string) => string
+}
+
 export const Routes = {
   HOME: {
     key: "Home",
-    path: "(main)/Home/index" as const,
-    route: () => `/(main)/Home` as const,
+    path: "(main)/(tabs)/Home/index" as const,
+    route: () => `/(main)/(tabs)/Home` as const,
   },
   LOGIN: {
     key: "Login",
@@ -11,7 +18,22 @@ export const Routes = {
   },
   TABS: {
     key: "Tabs",
-    path: "(tabs)" as const,
-    route: () => `/(tabs)` as const,
+    path: "(main)/(tabs)" as const,
+    route: () => `/` as const,
   },
-}
+  PROFILE: {
+    key: "Profile",
+    path: "(main)/(tabs)/Profile/index" as const,
+    route: () => `/(main)/(tabs)/Profile` as const,
+  },
+  SEARCH: {
+    key: "Search",
+    path: "(main)/(tabs)/Search/index" as const,
+    route: () => `/(main)/(tabs)/Search` as const,
+  },
+  HELP_CENTER: {
+    key: "HelpCenter",
+    path: "(main)/HelpCenter/index" as const,
+    route: () => `/(main)/HelpCenter` as const,
+  },
+} as const satisfies Record<string, RouteConfig<string, string>>
