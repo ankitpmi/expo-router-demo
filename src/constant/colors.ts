@@ -1,0 +1,15 @@
+export const colors = {
+  tangBlue: "#2B59C3",
+  yaleBlue: "#253C78",
+  biceBlue: "#3A6EA5",
+  polynesianBlue: "#004E98",
+  blush: "#D36582",
+  papayaWhip: "#FFEECF",
+  tan: "#C9A690",
+  Pumpkin: "#FF6700",
+  antiFlashWhite: "#EBEBEB",
+  Silver: "#C0C0C0",
+  white: "#ffffff",
+  black: "#000000",
+  engineeringOrange: "#BC2C1A",
+}

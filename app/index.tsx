@@ -1,15 +1,9 @@
-import { Text, View } from "react-native";
+import { Routes } from "@/src/navigation"
+import { Redirect } from "expo-router"
 
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  const isLoggedIn = false
+
+  // return <Redirect href={isLoggedIn ? "/(main)/Home" : "/(auth)/Login"} />
+  return <Redirect href={isLoggedIn ? Routes.HOME.path : Routes.LOGIN.path} />
 }
