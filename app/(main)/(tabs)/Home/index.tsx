@@ -5,6 +5,14 @@ import { useHome } from "./useHome"
 
 const Home = () => {
   const { handleLogout, handleHelpCenter } = useHome()
+  // const navigation = useNavigation()
+
+  // React.useLayoutEffect(() => {
+  //   // Set the header left button for the screen
+  //   navigation.setOptions({
+  //     headerLeft: () => <DrawerToggleButton tintColor={colors.tangBlue} />,
+  //   })
+  // }, [navigation])
   return (
     <View style={styles.homeContainer}>
       <Text style={styles.screenText}>Home</Text>
