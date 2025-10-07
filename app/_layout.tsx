@@ -28,7 +28,7 @@ const AppRoutes = () => {
               and will be registered by that layout. Registering nested files
               at the root causes the "No route named ... exists in nested
               children" warnings. */}
-          <Stack.Screen name={Routes.TABS.path} />
+          <Stack.Screen name={Routes.APP_DRAWER.path} />
 
           {/* Keep standalone screens that live outside the tabs group */}
           <Stack.Screen name={Routes.HELP_CENTER.path} />

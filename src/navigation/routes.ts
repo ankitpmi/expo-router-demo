@@ -22,7 +22,7 @@ export const Routes = {
     key: "Tabs",
     path: "(main)/(tabs)" as const,
     name: "(main)/(tabs)",
-    route: () => `/` as const,
+    route: () => `/(main)/(drawer)/(tabs)` as const,
   },
   PROFILE: {
     key: "Profile",
@@ -41,5 +41,11 @@ export const Routes = {
     path: "(main)/HelpCenter/index" as const,
     name: "HelpCenter",
     route: () => `/(main)/HelpCenter` as const,
+  },
+  APP_DRAWER: {
+    key: "DrawerLayout",
+    path: "(main)/(drawer)" as const,
+    name: "(main)/(drawer)",
+    route: () => `/` as const,
   },
 } as const satisfies Record<string, RouteConfig<string, string>>
