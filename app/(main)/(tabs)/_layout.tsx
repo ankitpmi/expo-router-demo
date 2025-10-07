@@ -15,19 +15,20 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name={Routes.PROFILE.name}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <Feather name="user" size={24} color="black" />
-          ),
-        }}
-      />
+
       <Tabs.Screen
         name={Routes.SEARCH.name}
         options={{
           tabBarIcon: ({ color }) => (
             <Feather name="search" size={22} color="black" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name={Routes.PROFILE.name}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Feather name="user" size={24} color="black" />
           ),
         }}
       />

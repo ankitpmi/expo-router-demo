@@ -1,4 +1,3 @@
-// ...existing code...
 type RouteConfig<K extends string, P extends string> = {
   key: K
   path: P
@@ -44,4 +43,3 @@ export const Routes = {
     route: () => `/(main)/HelpCenter` as const,
   },
 } as const satisfies Record<string, RouteConfig<string, string>>
-// ...existing code...
